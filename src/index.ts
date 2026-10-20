@@ -13,7 +13,7 @@ const normalizePort = (val: string): number | string | boolean => {
         return val;
     }
 
-    // If it passes a comparison check, it is a valid port number.
+    // If it passes a comparison check, I can tell that it is a valid port number.
     if (port >= 0) {
         return port;
     }
@@ -38,7 +38,7 @@ const onError = (error: NodeJS.ErrnoException): void => {
     // should see the above pipe/port possibilities reflected here.
     const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
 
-    // Handle specific listen errors with friendly messages.
+    // Here I tell the server to handle specific listen errors with friendly messages.
     switch (error.code) {
         case 'EACCES':
             console.error(`${bind} requires elevated privileges!`);
